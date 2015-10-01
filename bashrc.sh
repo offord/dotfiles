@@ -57,11 +57,11 @@ if [ -n "$force_color_prompt" ]; then
   color_prompt=
     fi
 fi
-
+#export PS1='\u@\h {`git branch | fgrep "* " | cut -d" " -f2`} \w \$ '
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w \$\[\033[00m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]{`git branch 2>/dev/null | fgrep "* " | cut -d" " -f2`} \w \$\[\033[00m\] '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w {`git branch | fgrep "* " | cut -d" " -f2`} \$ '
 fi
 unset color_prompt force_color_prompt
 
