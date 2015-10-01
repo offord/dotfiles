@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+PUBLISH bash_aliases.sh ~/.bash_aliases
+PUBLISH bash_functions.sh ~/.bash_functions
+PUBLISH bashrc.sh ~/.bashrc
+PUBLISH profile.sh ~/.profile
