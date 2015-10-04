@@ -5,4 +5,9 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 
-set syntax=on
+syntax on
+
+map  :b#
+map  :buffers
+map  :next
+map  :w
